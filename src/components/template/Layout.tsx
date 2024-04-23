@@ -1,4 +1,7 @@
+'use client'
+
 import MenuLateral from "./MenuLateral";
+import "tailwindcss/tailwind.css";
 import Cabecalho from "./Cabecalho";
 import Conteudo from "./Conteudo";
 interface LayoutProps {
@@ -15,14 +18,14 @@ export default function Layout(props: LayoutProps) {
         `}
     >
       <MenuLateral />
-      <div className={` 
+      <div
+        className={` 
         flex flex-col w-full p-7
         bg-gray-300 dark:bg-gray-800
-      `}>
+      `}
+      >
         <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
-        <Conteudo>
-            {props.children}
-        </Conteudo>
+        <Conteudo>{props.children}</Conteudo>
       </div>
     </div>
   );
