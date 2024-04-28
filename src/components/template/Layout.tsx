@@ -1,7 +1,7 @@
 'use client'
 
 import MenuLateral from "./MenuLateral";
-import "tailwindcss/tailwind.css";
+
 import Cabecalho from "./Cabecalho";
 import Conteudo from "./Conteudo";
 interface LayoutProps {
@@ -13,7 +13,7 @@ interface LayoutProps {
 export default function Layout(props: LayoutProps) {
   return (
     <div
-      className={` 
+      className={` dark
         flex h-screen w-screen
         `}
     >

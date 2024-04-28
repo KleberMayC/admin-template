@@ -1,5 +1,5 @@
 import Layout from "../components/template/Layout";
-
+import "tailwindcss/tailwind.css";
 export default function Ajustes() {
   return (
     <Layout

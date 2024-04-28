@@ -7,6 +7,7 @@ export default function Cabecalho(props: ConteudoProps) {
     <div
       className={`
     flex flex-col mt-z
+    dark:text-gray-200
     `}
     >
       {props.children}
