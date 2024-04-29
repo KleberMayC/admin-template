@@ -1,4 +1,6 @@
+import ThemeSwitcher from "@/components/template/theme-switcher";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 
 
@@ -16,7 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+          {children}
+        
+          <h2>sadasdasd</h2>
+        
+       
+        
+        </body>
     </html>
   );
 }

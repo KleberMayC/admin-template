@@ -1,19 +1,25 @@
-import React, { createContext, ReactNode } from "react";
+'use client'
 
-interface AppProviderProps {
-  children: ReactNode;
+import { createContext } from "react";
+
+
+
+
+interface AppContextProps {
+  name: string;
 }
 
-const AppContext = createContext({});
 
-export function AppProvider(props: AppProviderProps) {
+
+export const AppContext = createContext({} as AppContextProps);
+
+export function AppContextProvider({children}: {children: React.ReactNode}) {
   return (
-    <AppContext.Provider
-      value={{
-        nome: 'Texte Conext API'
+    <AppContext.Provider value={{
+        name: "dark"
       }}
     >
-      {props.children}
+      {children}
     </AppContext.Provider>
   );
 }
